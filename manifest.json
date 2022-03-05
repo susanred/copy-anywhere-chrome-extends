@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "name": "Copy Anywhere",
+  "version": "1.0.0",
+  "description": "html文本快捷提取",
+  "icons": {
+    "16": "./img/icon.png",
+    "48": "./img/icon.png",
+    "128": "./img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "./img/icon.png",
+    "default_title": "Copy Anywhere",
+    "default_popup": "./html/index.html"
+  },
+  "web_accessible_resources": [
+    "js/baseJs/jquery-3.6.0.js",
+    "js/baseJs/bootstrap-5.1.3.min.js",
+    "html/test.html"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "./js/baseJs/jquery-3.6.0.js",
+        "./js/baseJs/bootstrap-5.1.3.bundle.min.js",
+        "./js/contentJs/content.js"
+      ],
+      "css": [
+        "./css/bootstrap.min.css"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs"
+  ]
+}
+
+

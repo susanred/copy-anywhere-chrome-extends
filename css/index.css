@@ -1,0 +1,11 @@
+#copySuccess .text{
+    font-weight: bold;
+}
+
+#CA-setting{
+    width: 600px;
+}
+
+#CA-currentTpl{
+    width: 200px;
+}
